@@ -26,15 +26,15 @@
         <div class="container">
 
 
-   //         @guest
-    //            <a class="navbar-brand" href="{{ url('/') }}">
-     //               {{ config('app.name', 'Laravel') }}
-       //         </a>
-         //   @else
-             //   <a class="navbar-brand" href="{{ route('home') }}">
-           //         Home
-               // </a>
-            //@endguest
+            @guest
+                <a class="navbar-brand" href="{{ url('/') }}">
+                    {{ config('app.name', 'Laravel') }}
+                </a>
+            @else
+                <a class="navbar-brand" href="{{ route('home') }}">
+                    Home
+                </a>
+            @endguest
 
 
 
