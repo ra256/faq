@@ -32,7 +32,7 @@
                 </a>
             @else
                 <a class="navbar-brand" href="{{ route('home') }}">
-                    Home
+                    Homes
                 </a>
             @endguest
 
