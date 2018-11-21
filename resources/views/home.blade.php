@@ -37,7 +37,7 @@
                                         </div>
                                     </div>
                                 @empty
-                                    There are no questions to view, you can  create a question.
+                                    There aren't any questions to view, you can  create a question.
                                 @endforelse
 
 
