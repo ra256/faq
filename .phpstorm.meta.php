@@ -5,7 +5,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2018-11-21 04:20:17.
+    * Generated on 2018-11-21 04:35:07.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -77,6 +77,8 @@ namespace PHPSTORM_META {
         'command.notification.make' => \Illuminate\Foundation\Console\NotificationMakeCommand::class,
         'command.notification.table' => \Illuminate\Notifications\Console\NotificationTableCommand::class,
         'command.observer.make' => \Illuminate\Foundation\Console\ObserverMakeCommand::class,
+        'command.optimize' => \Illuminate\Foundation\Console\OptimizeCommand::class,
+        'command.optimize.clear' => \Illuminate\Foundation\Console\OptimizeClearCommand::class,
         'command.package.discover' => \Illuminate\Foundation\Console\PackageDiscoverCommand::class,
         'command.policy.make' => \Illuminate\Foundation\Console\PolicyMakeCommand::class,
         'command.preset' => \Illuminate\Foundation\Console\PresetCommand::class,
@@ -214,6 +216,8 @@ namespace PHPSTORM_META {
         'command.notification.make' => \Illuminate\Foundation\Console\NotificationMakeCommand::class,
         'command.notification.table' => \Illuminate\Notifications\Console\NotificationTableCommand::class,
         'command.observer.make' => \Illuminate\Foundation\Console\ObserverMakeCommand::class,
+        'command.optimize' => \Illuminate\Foundation\Console\OptimizeCommand::class,
+        'command.optimize.clear' => \Illuminate\Foundation\Console\OptimizeClearCommand::class,
         'command.package.discover' => \Illuminate\Foundation\Console\PackageDiscoverCommand::class,
         'command.policy.make' => \Illuminate\Foundation\Console\PolicyMakeCommand::class,
         'command.preset' => \Illuminate\Foundation\Console\PresetCommand::class,
@@ -351,6 +355,8 @@ namespace PHPSTORM_META {
         'command.notification.make' => \Illuminate\Foundation\Console\NotificationMakeCommand::class,
         'command.notification.table' => \Illuminate\Notifications\Console\NotificationTableCommand::class,
         'command.observer.make' => \Illuminate\Foundation\Console\ObserverMakeCommand::class,
+        'command.optimize' => \Illuminate\Foundation\Console\OptimizeCommand::class,
+        'command.optimize.clear' => \Illuminate\Foundation\Console\OptimizeClearCommand::class,
         'command.package.discover' => \Illuminate\Foundation\Console\PackageDiscoverCommand::class,
         'command.policy.make' => \Illuminate\Foundation\Console\PolicyMakeCommand::class,
         'command.preset' => \Illuminate\Foundation\Console\PresetCommand::class,
@@ -488,6 +494,8 @@ namespace PHPSTORM_META {
         'command.notification.make' => \Illuminate\Foundation\Console\NotificationMakeCommand::class,
         'command.notification.table' => \Illuminate\Notifications\Console\NotificationTableCommand::class,
         'command.observer.make' => \Illuminate\Foundation\Console\ObserverMakeCommand::class,
+        'command.optimize' => \Illuminate\Foundation\Console\OptimizeCommand::class,
+        'command.optimize.clear' => \Illuminate\Foundation\Console\OptimizeClearCommand::class,
         'command.package.discover' => \Illuminate\Foundation\Console\PackageDiscoverCommand::class,
         'command.policy.make' => \Illuminate\Foundation\Console\PolicyMakeCommand::class,
         'command.preset' => \Illuminate\Foundation\Console\PresetCommand::class,
@@ -625,6 +633,8 @@ namespace PHPSTORM_META {
         'command.notification.make' => \Illuminate\Foundation\Console\NotificationMakeCommand::class,
         'command.notification.table' => \Illuminate\Notifications\Console\NotificationTableCommand::class,
         'command.observer.make' => \Illuminate\Foundation\Console\ObserverMakeCommand::class,
+        'command.optimize' => \Illuminate\Foundation\Console\OptimizeCommand::class,
+        'command.optimize.clear' => \Illuminate\Foundation\Console\OptimizeClearCommand::class,
         'command.package.discover' => \Illuminate\Foundation\Console\PackageDiscoverCommand::class,
         'command.policy.make' => \Illuminate\Foundation\Console\PolicyMakeCommand::class,
         'command.preset' => \Illuminate\Foundation\Console\PresetCommand::class,
@@ -762,6 +772,8 @@ namespace PHPSTORM_META {
         'command.notification.make' => \Illuminate\Foundation\Console\NotificationMakeCommand::class,
         'command.notification.table' => \Illuminate\Notifications\Console\NotificationTableCommand::class,
         'command.observer.make' => \Illuminate\Foundation\Console\ObserverMakeCommand::class,
+        'command.optimize' => \Illuminate\Foundation\Console\OptimizeCommand::class,
+        'command.optimize.clear' => \Illuminate\Foundation\Console\OptimizeClearCommand::class,
         'command.package.discover' => \Illuminate\Foundation\Console\PackageDiscoverCommand::class,
         'command.policy.make' => \Illuminate\Foundation\Console\PolicyMakeCommand::class,
         'command.preset' => \Illuminate\Foundation\Console\PresetCommand::class,
@@ -899,6 +911,8 @@ namespace PHPSTORM_META {
         'command.notification.make' => \Illuminate\Foundation\Console\NotificationMakeCommand::class,
         'command.notification.table' => \Illuminate\Notifications\Console\NotificationTableCommand::class,
         'command.observer.make' => \Illuminate\Foundation\Console\ObserverMakeCommand::class,
+        'command.optimize' => \Illuminate\Foundation\Console\OptimizeCommand::class,
+        'command.optimize.clear' => \Illuminate\Foundation\Console\OptimizeClearCommand::class,
         'command.package.discover' => \Illuminate\Foundation\Console\PackageDiscoverCommand::class,
         'command.policy.make' => \Illuminate\Foundation\Console\PolicyMakeCommand::class,
         'command.preset' => \Illuminate\Foundation\Console\PresetCommand::class,
