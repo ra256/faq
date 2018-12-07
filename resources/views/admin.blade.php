@@ -13,6 +13,9 @@
                         <td>Delete</td>
                     </tr>
                     @forelse($users as $user)
+                        @if (Auth::user()->id==$user->id)
+                            @continue
+                        @endif
                     <tr>
                         <td>{{$user->id}}</td>
                         <td>{{$user->email}}</td>
