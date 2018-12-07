@@ -9,9 +9,9 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\User::class, 50)->create()->each(function ($user) {
-            $user->profile()->save(factory(App\Profile::class)->make());
-        });
+//        factory(App\User::class, 50)->create()->each(function ($user) {
+//            $user->profile()->save(factory(App\Profile::class)->make());
+//        });
 
         //Add Admin
         DB::table('users')->insert([
