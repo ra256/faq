@@ -9,8 +9,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(UsersTableSeeder::class);
-        $this->call(QuestionsTableSeeder::class);
-        $this->call(AnswersTableSeeder::class);
+        DB::table('users')->insert([
+            'email' => 'admin@raheelminiproject3.herokuapp.com',
+            'password' => bcrypt('admin'),
+            'created_at' => date("Y-m-d H:i:s"),
+            'updated_at' => date("Y-m-d H:i:s"),
+            'locked' => 0,
+            'permission' => 1
+        ]);
+//        $this->call(UsersTableSeeder::class);
+//        $this->call(QuestionsTableSeeder::class);
+//        $this->call(AnswersTableSeeder::class);
     }
 }
