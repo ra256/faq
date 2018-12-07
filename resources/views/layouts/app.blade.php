@@ -62,6 +62,9 @@
                             </a>
 
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                @if (Auth::user()->permission==1)
+                                    <a class="dropdown-item" href="{{ route('admin') }}">Admin Page</a>
+                                @endif
                                 @if (Auth::user()->profile)
                                     <a class="dropdown-item" href="{{ route('profile.show', ['user_id' => Auth::user()->id,'profile_id' => Auth::user()->profile->id]) }}">My Profile</a>
 

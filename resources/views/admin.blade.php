@@ -18,12 +18,12 @@
                         <td>{{$user->email}}</td>
                         <td>
                             @if ($user->locked == 0)
-                                <a class="btn btn-warning" href="admin/lock/{{$user->id}}">Lock</a>
+                                <a class="btn btn-warning" href="{{ route('admin.lockuser', ['user_id' => $user->id]) }}">Lock</a>
                             @else
-                                <a class="btn btn-primary" href="admin/unlock/{{$user->id}}">Unlock</a>
+                                <a class="btn btn-primary" href="{{ route('admin.unlockuser', ['user_id' => $user->id]) }}">Unlock</a>
                             @endif
                         </td>
-                        <td><a class="btn btn-danger" href="admin/delete/{{$user->id}}">Delete</a></td>
+                        <td><a class="btn btn-danger" href="{{ route('admin.deleteuser', ['user_id' => $user->id]) }}">Delete</a></td>
                     </tr>
                     @empty
                         <tr><td colspan="4">There aren't any questions to view, you can  create a question.</td></tr>

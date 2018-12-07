@@ -16,7 +16,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin', 'AdminController@index')->name('admin');
 Route::get('/admin/delete/{user_id}', 'AdminController@deleteUser')->name('admin.deleteuser');
-Route::get('/admin/unlock/{user_id}', 'AdminController@unlockUser')->name('admin.unlcokuser');
+Route::get('/admin/unlock/{user_id}', 'AdminController@unlockUser')->name('admin.unlockuser');
 Route::get('/admin/lock/{user_id}', 'AdminController@lockUser')->name('admin.lockuser');
 Route::get('/user/{user_id}/profile', 'ProfileController@create')->name('profile.create');
 Route::get('/user/{user_id}/profile/{profile_id}', 'ProfileController@show')->name('profile.show');

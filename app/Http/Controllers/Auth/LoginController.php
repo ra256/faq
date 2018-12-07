@@ -54,7 +54,7 @@ class LoginController extends Controller
     public function login(Request $request)
     {
         if($this->checkIfNotLocked($request)==false){
-            return $this->sendFailedLoginResponse($request);
+            return redirect()->route('login')->withErrors(["Error! Your account has been locked."]);
         }
 
         $this->validateLogin($request);
