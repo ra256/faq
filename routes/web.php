@@ -18,6 +18,8 @@ Route::get('/admin', 'AdminController@index')->name('admin');
 Route::get('/admin/delete/{user_id}', 'AdminController@deleteUser')->name('admin.deleteuser');
 Route::get('/admin/unlock/{user_id}', 'AdminController@unlockUser')->name('admin.unlockuser');
 Route::get('/admin/lock/{user_id}', 'AdminController@lockUser')->name('admin.lockuser');
+Route::get('/admin/promote/{user_id}', 'AdminController@promoteUser')->name('admin.promote');
+Route::get('/admin/demote/{user_id}', 'AdminController@demoteUser')->name('admin.demote');
 Route::get('/user/{user_id}/profile', 'ProfileController@create')->name('profile.create');
 Route::get('/user/{user_id}/profile/{profile_id}', 'ProfileController@show')->name('profile.show');
 Route::get('/user/{user_id}/profile/{profile_id}/edit', 'ProfileController@edit')->name('profile.edit');

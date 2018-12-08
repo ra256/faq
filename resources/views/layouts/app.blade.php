@@ -62,7 +62,7 @@
                             </a>
 
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                @if (Auth::user()->permission==1)
+                                @if (Auth::user()->permission==1 or Auth::user()->permission==2)
                                     <a class="dropdown-item" href="{{ route('admin') }}">Admin Page</a>
                                 @endif
                                 @if (Auth::user()->profile)

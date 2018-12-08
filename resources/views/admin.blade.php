@@ -4,11 +4,19 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12">
+                @if (Auth::user()->permission==2)
+                    <span class="badge badge-info">Welcome Admin</span>
+                @elseif (Auth::user()->permission==1)
+                    <span class="badge badge-info">Welcome Super Admin</span>
+                @endif
                 <h1>User Management</h1>
                 <table class="table">
                     <tr>
                         <td>ID</td>
                         <td>Email</td>
+                        @if (Auth::user()->permission==1)
+                            <td>Admin Privilege</td>
+                        @endif
                         <td>Lock</td>
                         <td>Delete</td>
                     </tr>
@@ -19,6 +27,15 @@
                     <tr>
                         <td>{{$user->id}}</td>
                         <td>{{$user->email}}</td>
+                        @if (Auth::user()->permission==1)
+                            <td>
+                                @if ($user->permission == 0)
+                                    <a class="btn btn-success" href="{{ route('admin.promote', ['user_id' => $user->id]) }}">Promote To Admin</a>
+                                @elseif($user->permission == 2)
+                                    <a class="btn btn-primary" href="{{ route('admin.demote', ['user_id' => $user->id]) }}">Demote To User</a>
+                                @endif
+                            </td>
+                        @endif
                         <td>
                             @if ($user->locked == 0)
                                 <a class="btn btn-warning" href="{{ route('admin.lockuser', ['user_id' => $user->id]) }}">Lock</a>
