@@ -17,6 +17,8 @@
     "require-dev": {
         "filp/whoops": "*",
         "fzaninotto/faker": "*",
+        "laravel/browser-kit-testing": "^4.1",
+        "laravel/dusk": "^4.0",
         "mockery/mockery": "*",
         "nunomaduro/collision": "*",
         "phpunit/phpunit": "*"
