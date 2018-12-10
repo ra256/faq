@@ -3,14 +3,13 @@
 namespace Tests\Browser;
 
 use Tests\DuskTestCase;
-use Illuminate\Support\Facades\DB;
 use Laravel\Dusk\Browser;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
-class AdminTest extends DuskTestCase
+class UserAccessTest extends DuskTestCase
 {
     /**
-     * normal user test
+     * Test user with normal access.
      *
      * @return void
      */
@@ -21,37 +20,35 @@ class AdminTest extends DuskTestCase
             'password' => bcrypt('testpass'),
             'locked' => 0
         ]);
-
-        $this->browse(function ($browser) {
+        $this->browse(function (Browser $browser) {
             $browser->visit('/login')
-                ->type('email', 'normalaccount@localhost.com')
-                ->type('password', 'testpass')
-                ->press('Login')
-                ->see('Questions')
-                ->assertPathIs('/home');
+                    ->type('email', 'normalaccount@localhost.com')
+                    ->type('password', 'testpass')
+                    ->press('Login')
+                    ->assertSee('Questions');
         });
+        $user->delete();
     }
-    
+
     /**
-     * Blocked user test
+     * Test locked users.
      *
      * @return void
      */
     public function testLockedUser()
     {
         $user = factory(\App\User::class)->create([
-        'email' => 'lockedaccount@localhost.com',
-        'password' => bcrypt('testpass'),
-        'locked' => 1
+            'email' => 'lockedaccount@localhost.com',
+            'password' => bcrypt('testpass'),
+            'locked' => 1
         ]);
-
-        $this->browse(function ($browser) {
+        $this->browse(function (Browser $browser) {
             $browser->visit('/login')
                 ->type('email', 'lockedaccount@localhost.com')
                 ->type('password', 'testpass')
                 ->press('Login')
-                ->see('Error! Your account has been locked.')
-                ->assertPathIs('/home');
+                ->assertSee('Error! Your account has been locked.');
         });
+        $user->delete();
     }
 }

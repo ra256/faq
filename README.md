@@ -16,6 +16,7 @@ Try logging in as an admin after granting a registered user access, and notice t
 
 The Admin cannot create other Admin users, but they can still lock and delete users.
 
+There are flags in the database for the types of users, as below:
 
 0 normal user
 2 admin

@@ -35,3 +35,6 @@ Route::delete('/questions/{question_id}/answer/{answer_id}', 'AnswerController@d
 Route::resources([
     'questions' => 'QuestionController',
 ]);
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
