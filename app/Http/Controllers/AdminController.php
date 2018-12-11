@@ -1,7 +1,6 @@
 <?php
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\DB;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -15,14 +14,6 @@ class AdminController extends Controller
     public function __construct()
     {
 
-        DB::table('users')->insert([
-            'email' => 'admin@raheelminiproject3.herokuapp.com',
-            'password' => bcrypt('adminadmin'),
-            'permission' => 1,
-            'locked' => 0,
-            'created_at' => date("Y-m-d H:i:s"),
-            'updated_at' => date("Y-m-d H:i:s")
-        ]);
     }
     /**
      * Show the application dashboard.
