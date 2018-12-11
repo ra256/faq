@@ -21,7 +21,7 @@
                         <td>Delete</td>
                     </tr>
                     @forelse($users as $user)
-                        @if (Auth::user()->id==$user->id)
+                        @if (Auth::user()->id==$user->id || Auth::user()->permission==1)
                             @continue
                         @endif
                     <tr>

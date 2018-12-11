@@ -1,9 +1,25 @@
 # faq
 
-1) A Super Admin has all privileges, including giving admin access to all users.
-2) An Admin User can lock and unlock accounts but can not give admin access to other users.
+Epic - Adding Admin Role Functionality
+
+User Story 1) Delete a User
+
+As an Admin - I must be able to log in and access the Admin Control Panel, search for a single user and delete users so that I can manage my system in the event my users no longer work for me.
+
+Acceptance Criteria: Prerequisite - Admin user must be already created. Log in as Admin, go to the Admin Page. Search for a specific user and delete them from this page. Log out and try to login as that deleted user and that user cannot log in successfully because they are deleted.
+
+User Story 2) Lock a User
+
+As an Admin - I must be able to log in and access the Admin Control Panel, search for a single user and lock users so that I can temporarily or permanently stop a user from accessing the site, unless decided later to undo the lock.
+
+Acceptance Criteria: Prerequisite - Admin user must be already created. Log in as Admin, go to the Admin Page. Search for a specific user and lock them from this page. Log out and try to login as that locked user and that user cannot log in successfully because they are currently locked.
+
+User Story 3) Unlock a User
+
+As an Admin - I must be able to log in and access the Admin Control Panel, search for a single user and unlock users so that the user can log back in stop a user from accessing the site, unless decided later to undo the lock.
+
+Acceptance Criteria: Prerequisite - Admin user must be already created. Log in as Admin, go to the Admin Page. Search for a specific user and lock them from this page. Log out and try to login as that locked user and that user cannot log in successfully because they are currently locked.
 3) A standard users cannot view the admin URL as they will get an error message.
-4) Admins can delete a user.
 
 To use the Super Admin, log in with the following credentials:
 

@@ -40,8 +40,12 @@ class AdminController extends Controller
         }
 
         $user = User::find($userId);
-        $user->delete();
-        return redirect()->route('admin')->with('message', 'User has been deleted!');
+        if($user->permission==1) { //Trying to delete the super admin
+            return redirect()->route('home')->withErrors(["Sorry, you're not allowed to perform this action."]);
+        }else{
+            $user->delete();
+            return redirect()->route('admin')->with('message', 'User has been deleted!');
+        }
     }
 
     public function lockUser($userId){
