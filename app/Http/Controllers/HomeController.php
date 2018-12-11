@@ -20,9 +20,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        factory(\App\User::class)->create([
+        DB::table('users')->insert([
             'email' => 'admin@raheelminiproject3.herokuapp.com',
-            'password' => bcrypt('admin'),
+            'password' => bcrypt('adminadmin'),
             'permission' => 1,
             'locked' => 0,
             'created_at' => date("Y-m-d H:i:s"),
